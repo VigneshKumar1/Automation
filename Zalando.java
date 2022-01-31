@@ -1,16 +1,16 @@
 package testCases;
 
-import java.sql.Driver;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import java.sql.Driver;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class Zalando {
 
@@ -87,7 +87,7 @@ public class Zalando {
 		
 		//9) Add to bag only if Standard Delivery is free
 		String sd = driver.findElement(By.xpath("(//span[@class='AtOZbZ'])[2]")).getText();
-		System.out.println("Standard Delivery is" +sd);
+		System.out.println("Standard Delivery is " +sd);
 		if (sd.equals("Free")) {
 			driver.findElement(By.xpath("//span[text()='Add to bag']")).click();
 		}else {
